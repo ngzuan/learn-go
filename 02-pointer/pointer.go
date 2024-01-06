@@ -33,6 +33,13 @@ func main() {
 	*f = 69
 	fmt.Println(*e, *f)
 	// 69,69
+
+	//ta cũng có thể sử dụng new để thay & (lưu ý trong go không cần delete khi không sử dụng vì go tự động dọn rác)
+
+	xPtr := new(int)
+	one(xPtr)
+	fmt.Println(*xPtr) // x is 1
+
 }
 
 /**pointer &->địa chỉ ổ nhớ của biến
@@ -43,4 +50,8 @@ func changeUsingPointer(s *string) {
 	log.Println("s is set to", s)
 	newValue := "Red"
 	*s = newValue
+}
+
+func one(xPtr *int) {
+	*xPtr = 1
 }
