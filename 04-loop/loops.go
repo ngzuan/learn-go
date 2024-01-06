@@ -23,7 +23,7 @@ func main() {
 	// result dog cun
 	// 		  cat meo meo
 
-	var text string = "tuan dep trai vai loz"
+	var text string = "tuan dep trai"
 	for i, t := range text {
 		fmt.Println(i, t)
 	}
